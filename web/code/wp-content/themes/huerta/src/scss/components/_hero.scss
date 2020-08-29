@@ -1,0 +1,150 @@
+.c-hero {
+  display: flex;
+  background-position: 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 7.1rem;
+  min-height: 80rem;
+  padding-top: 10rem;
+  position: relative;
+  text-align: center;
+  width: 100%;
+
+  @include iota-breakpoint(md) {
+    justify-content: flex-end;
+    min-height: 99rem;
+    padding-bottom: 13.2rem;
+    text-align: left;
+  }
+
+  &__wrapper {
+    height: 100%;
+  }
+
+  &__title {
+    color: color(white-10);
+    font: 700 4rem/1 $poppins;
+    letter-spacing: 0;
+    margin: 0;
+    text-transform: uppercase;
+
+    @include iota-breakpoint(md) {
+      font: 700 7.6rem/1 $poppins;
+    }
+  }
+
+  &__subtitle {
+    color: color(white-10);
+    font: 700 5rem/1 $poppins;
+    letter-spacing: 0;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+
+    @include iota-breakpoint(md) {
+      margin-bottom: 0;
+      font: 700 10.7rem/1 $poppins;
+    }
+  }
+
+  &__copy {
+    color: color(white-10);
+    font: 500 2.1rem/1 $poppins;
+    letter-spacing: 0.3rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  &__button {
+    background-color: color(white);
+    border-radius: 1rem;
+    font: 600 1.3rem/2rem $poppins;
+    letter-spacing: 0.182rem;
+    color: color(wine);
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    min-width: 100%;
+    padding: 1.1rem 3.9rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:active {
+      color: color(wine);
+      text-decoration: none;
+    }
+
+    @include iota-breakpoint(md) {
+      margin-bottom: 0;
+      min-width: 19.7rem;
+    }
+
+    &--icon {
+      background-image: url("../img/whatsapp.svg");
+      background-repeat: no-repeat;
+      background-position: 1.7rem 50%;
+      margin-top: 2rem;
+      padding: 1.1rem 3.9rem 1.1rem 6rem;
+      font: 300 1.6rem/2.5rem $poppins;
+    }
+  }
+
+  &__swiper {
+    display: none;
+    text-align: right;
+    position: relative;
+
+    @include iota-breakpoint(md) {
+      display: block;
+    }
+
+    &_button {
+      appearance: none;
+      background: none;
+      border: none;
+      display: inline-block;
+      margin-bottom: 1.8rem;
+
+      &--left {
+        margin-right: 5.3rem;
+      }
+    }
+
+    &_title {
+      color: color(white);
+      font: 600 1.9rem/2.9rem $poppins;
+      letter-spacing: 0;
+      margin-bottom: 1.2rem;
+    }
+
+    &_copy {
+      color: color(white);
+      font: 300 1.4rem / 2.1rem $poppins;
+      letter-spacing: 0;
+    }
+  }
+
+  &__scroll {
+    display: none;
+    left: 50%;
+    position: absolute;
+    z-index: 2;
+
+    @include iota-breakpoint(lg) {
+      bottom: -10rem;
+      display: block;
+    }
+
+    @include iota-breakpoint(xxl) {
+      bottom: 6rem;
+    }
+  }
+}

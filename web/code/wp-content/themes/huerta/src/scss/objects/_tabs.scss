@@ -1,0 +1,9 @@
+.o-tabs {
+  &__panel {
+    display: none;
+
+    &.is-current {
+      display: block;
+    }
+  }
+}

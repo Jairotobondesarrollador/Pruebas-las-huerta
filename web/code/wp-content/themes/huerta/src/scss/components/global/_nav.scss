@@ -1,0 +1,78 @@
+.c-nav {
+  align-items: center;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  &__menu {
+    background-color: #68161c;
+    width: 100%;
+    display: none;
+    height: calc(100vh + 5rem);
+    left: 0;
+    list-style: none;
+    padding: 5rem 2rem 2rem 2rem;
+    position: absolute;
+    top: -5rem;
+
+    @include iota-breakpoint(md) {
+      background-color: transparent;
+      display: flex;
+      height: auto;
+      padding: 0;
+      position: static;
+      width: 100%;
+    }
+
+    &.is-active {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    li {
+      margin-bottom: 2.2rem;
+      @include iota-breakpoint(md) {
+        margin-bottom: 0;
+        margin-right: 2rem;
+      }
+
+      a {
+        color: color(white-10);
+        font: 300 2rem/3rem $poppins;
+        text-decoration: none;
+
+        @include iota-breakpoint(md) {
+          font: 300 1.6rem/2.5rem $poppins;
+        }
+      }
+    }
+  }
+
+  &__bg {
+    background-image: url("../img/hamburger.svg");
+    background-repeat: no-repeat;
+    display: block;
+    height: 4.2rem;
+    width: 4.2rem;
+  }
+
+  &__btn {
+    appearance: none;
+    background: none;
+    border: none;
+    display: block;
+    z-index: 2;
+
+    @include iota-breakpoint(md) {
+      display: none;
+    }
+
+    &.active {
+      & .c-nav__bg {
+        background-image: url("../img/close-white.svg");
+      }
+    }
+  }
+}

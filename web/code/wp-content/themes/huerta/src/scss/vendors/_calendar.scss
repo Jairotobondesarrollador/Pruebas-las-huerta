@@ -1,0 +1,196 @@
+.fc .fc-toolbar-title {
+	background-color: color(white);
+	box-shadow: 0 0.9rem 1rem #9b9b9b29;
+	border: 1px solid #68161c;
+	border-radius: 1rem;
+	color: #ef9b81;
+	font: 600 1.7rem/2.6rem $poppins;
+	min-width: 100%;
+	padding: 1.4rem 9rem;
+	text-align: center;
+
+	@include iota-breakpoint(lg) {
+		min-width: 52.5rem;
+		padding: 1.4rem 11rem;
+	}
+}
+
+#calendar {
+	margin-bottom: 5.9rem;
+	@include iota-breakpoint(md) {
+		margin-bottom: 0;
+	}
+}
+
+.fc .fc-toolbar.fc-header-toolbar {
+	display: block;
+	margin-bottom: -1rem !important;
+	z-index: 3;
+}
+
+.fc-h-event .fc-event-title {
+	cursor: pointer;
+}
+
+.fc .fc-view-harness {
+	background-color: color(white);
+	border: 0.1rem solid color(wine);
+	border-radius: 0 0 3rem 3rem;
+}
+
+.fc .fc-scroller-harness {
+	padding-top: 2rem;
+}
+
+.fc .fc-daygrid-body,
+.fc .fc-scrollgrid-section table {
+	margin: 0 auto;
+}
+
+.fc .fc-scroller {
+	overflow: hidden !important;
+}
+
+.fc table,
+.table-bordered th,
+.table-bordered td {
+	border: none;
+}
+
+.fc-theme-bootstrap a:not([href]) {
+	font-size: 1.5rem;
+	font-family: $poppins;
+	width: 65%;
+}
+
+a.fc-daygrid-day-number {
+	color: #ef9b81 !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today {
+	background-color: transparent !important;
+}
+
+.fc .fc-daygrid-day.fc-day-today .fc-daygrid-day-number {
+	color: #ef9b81;
+	position: relative;
+	font-weight: 800;
+
+	&::after {
+		background-color: #68161c;
+		border-radius: 50%;
+		content: '';
+		height: 4.3rem;
+		position: absolute;
+		top: -1rem;
+		left: -1rem;
+		width: 4.3rem;
+		z-index: -1;
+	}
+}
+
+td.fc-daygrid-day.fc-day.fc-day-past.fc-day-other fc-daygrid-day-number {
+	color: #aaaaaa !important;
+}
+
+.fc-toolbar-chunk {
+	width: 100%;
+}
+
+// Tooltips
+.popper,
+.tooltip {
+	font-size: 16px;
+	position: absolute;
+	z-index: 9999;
+	width: 300px;
+	border-radius: 3px;
+	text-align: center;
+	opacity: 1;
+}
+.style5 .tooltip {
+	background-color: #68161c;
+	color: #ef9b81;
+	max-width: 200px;
+	width: auto;
+	font-size: 0.8rem;
+	padding: 20px;
+}
+.popper .popper__arrow,
+.tooltip .tooltip-arrow {
+	width: 0;
+	height: 0;
+	border-style: solid;
+	position: absolute;
+	margin: 5px;
+}
+
+.tooltip-inner {
+	background-color: #68161c;
+	color: #fff;
+	font-weight: 700;
+}
+
+.style5 .tooltip .tooltip-arrow {
+	border-color: #ef9b81;
+}
+.popper[x-placement^='top'],
+.tooltip[x-placement^='top'] {
+	margin-bottom: 5px;
+}
+.popper[x-placement^='top'] .popper__arrow,
+.tooltip[x-placement^='top'] .tooltip-arrow {
+	border-width: 5px 5px 0 5px;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	bottom: -5px;
+	left: calc(50% - 5px);
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.popper[x-placement^='bottom'],
+.tooltip[x-placement^='bottom'] {
+	margin-top: 5px;
+}
+.tooltip[x-placement^='bottom'] .tooltip-arrow,
+.popper[x-placement^='bottom'] .popper__arrow {
+	border-width: 0 5px 5px 5px;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: transparent;
+	top: -5px;
+	left: calc(50% - 5px);
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.tooltip[x-placement^='right'],
+.popper[x-placement^='right'] {
+	margin-left: 5px;
+}
+.popper[x-placement^='right'] .popper__arrow,
+.tooltip[x-placement^='right'] .tooltip-arrow {
+	border-width: 5px 5px 5px 0;
+	border-left-color: transparent;
+	border-top-color: transparent;
+	border-bottom-color: transparent;
+	left: -5px;
+	top: calc(50% - 5px);
+	margin-left: 0;
+	margin-right: 0;
+}
+.popper[x-placement^='left'],
+.tooltip[x-placement^='left'] {
+	margin-right: 5px;
+}
+.popper[x-placement^='left'] .popper__arrow,
+.tooltip[x-placement^='left'] .tooltip-arrow {
+	border-width: 5px 0 5px 5px;
+	border-top-color: transparent;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	right: -5px;
+	top: calc(50% - 5px);
+	margin-left: 0;
+	margin-right: 0;
+}

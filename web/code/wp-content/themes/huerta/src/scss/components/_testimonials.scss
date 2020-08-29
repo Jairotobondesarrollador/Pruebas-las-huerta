@@ -1,0 +1,160 @@
+.c-testimonials {
+  margin-bottom: 10rem;
+  &__title {
+    font: 500 1.8rem/1 $poppins;
+    color: #ef9b81;
+    letter-spacing: 0.252rem;
+    margin-bottom: 0.2rem;
+    padding-top: 7rem;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    color: color(wine);
+    font: 700 4rem/1 $poppins;
+    letter-spacing: 0;
+    margin-bottom: 1.8rem;
+    text-transform: capitalize;
+  }
+
+  &__copy {
+    color: #585858;
+    font: 400 1.6rem/2rem $poppins;
+    letter-spacing: 0;
+    margin-bottom: 1.8rem;
+
+    @include iota-breakpoint(md) {
+      font: 400 1.6rem/2.5rem $poppins;
+    }
+  }
+
+  &__cta {
+    background-color: color(wine);
+    border-radius: 1rem;
+    background-image: url("../img/whatsapp-white.svg");
+    background-position: 1.7rem 50%;
+    background-repeat: no-repeat;
+    font: 600 1.3rem/2rem $poppins;
+    letter-spacing: 0.182rem;
+    color: color(white);
+    display: inline-flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    min-width: 100%;
+    padding: 1.5rem 3.9rem 1.3rem 6rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:active {
+      color: color(white);
+      text-decoration: none;
+    }
+
+    @include iota-breakpoint(md) {
+      margin-bottom: 0;
+      min-width: 19.7rem;
+    }
+  }
+
+  &__box {
+    border: 0.1rem solid #ef9b81;
+    border-radius: 1.8rem;
+    padding: 8.2rem 2.2rem 3.4rem 2.2rem;
+    position: relative;
+
+    @include iota-breakpoint(md) {
+      padding: 8.2rem 5.2rem 4.4rem 5.2rem;
+    }
+
+    & .swiper-wrapper,
+    & .swiper-slide {
+      position: static;
+    }
+  }
+
+  &__swiper {
+    padding-top: 7rem;
+  }
+
+  &__img {
+    background-color: color(white);
+    border: 0.1rem solid #ef9b81;
+    border-radius: 1.8rem;
+    display: inline-block;
+    left: 0rem;
+    padding: 2.5rem 1.8rem 1.8rem 1.8rem;
+    position: absolute;
+    top: 0;
+    transform: translateY(-6rem);
+    width: auto;
+    z-index: 4;
+  }
+
+  &__stars {
+    left: 0;
+    position: absolute;
+    top: 2rem;
+    transform: translate(14.7rem, 0);
+  }
+
+  &__star {
+    background-image: url("../img/wine-star.svg");
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+
+  &__heading {
+    color: color(wine);
+    font: 700 3rem/4.6rem $poppins;
+    letter-spacing: 0;
+    margin-bottom: 0.6rem;
+    text-transform: capitalize;
+
+    @include iota-breakpoint(md) {
+      font: 700 3rem/1 $poppins;
+    }
+  }
+
+  &__review {
+    color: #585858;
+    font: 400 1.6rem/2rem $poppins;
+    letter-spacing: 0;
+    margin-bottom: 2.3rem;
+
+    @include iota-breakpoint(md) {
+      font: 400 1.6rem/2.5rem $poppins;
+    }
+  }
+
+  &__buttons {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    transform: translate(2rem, -2rem);
+    z-index: 4;
+
+    @include iota-breakpoint(md) {
+      transform: translate(4rem, -2rem);
+    }
+  }
+
+  &__button {
+    appearance: none;
+    background: none;
+    border: none;
+
+    &--left {
+      margin-right: 3.2rem;
+    }
+  }
+}

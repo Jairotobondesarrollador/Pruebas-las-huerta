@@ -1,0 +1,79 @@
+.c-wysiwyg {
+  color: color(black);
+
+  @include iota-breakpoint(md) {
+    padding-right: 6rem;
+  }
+
+  p {
+    color: #585858;
+    font: 400 1.6rem/2.5 inherit;
+    letter-spacing: 0;
+  }
+
+  h1 {
+    color: #ef9b81;
+    font: 600 1.8rem/2.7rem $poppins;
+    letter-spacing: 0.252rem;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+
+  h2 {
+    color: color(wine);
+    font: 700 6rem /4rem $poppins;
+    letter-spacing: 0;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+  }
+
+  h3 {
+    @extend .c-heading;
+    @extend .c-heading--l3;
+
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  h4 {
+    @extend .c-heading;
+    @extend .c-heading--l4;
+
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  h5 {
+    @extend .c-heading;
+    @extend .c-heading--l5;
+
+    font-weight: 400;
+    margin-bottom: 1rem;
+  }
+
+  h6 {
+    font-weight: 300;
+    margin: 2rem 0;
+  }
+
+  &--accordion {
+    p {
+      color: #585858;
+      font: 400 1.4rem/2.1rem $poppins;
+      letter-spacing: 0;
+      margin-bottom: 1rem;
+      padding-left: 4rem;
+      position: relative;
+
+      &::after {
+        background-color: #ef9b81;
+        content: "";
+        height: 100%;
+        left: 2rem;
+        position: absolute;
+        top: 0;
+        width: 0.3rem;
+      }
+    }
+  }
+}

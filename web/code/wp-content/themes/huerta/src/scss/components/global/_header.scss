@@ -1,0 +1,19 @@
+.c-header {
+  align-items: center;
+  display: flex;
+  margin-top: 3.9rem;
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+
+  @include iota-breakpoint(md) {
+    &--fixed {
+      position: fixed;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    z-index: 2;
+  }
+}

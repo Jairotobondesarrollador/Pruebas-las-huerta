@@ -1,0 +1,125 @@
+.c-footer {
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+
+    @include iota-breakpoint(md) {
+      text-align: left;
+    }
+
+    li {
+      list-style: none;
+      margin-bottom: 2rem;
+      width: 100%;
+
+      @include iota-breakpoint(md) {
+        margin-bottom: 0;
+        width: auto;
+      }
+    }
+  }
+
+  &__top {
+    align-items: center;
+    background-color: #fdf5f2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3.7rem 0;
+
+    img {
+      margin-bottom: 2rem;
+    }
+
+    ul {
+      li {
+        @include iota-breakpoint(md) {
+          margin-right: 2rem;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          color: color(wine);
+          font: 300 1.6rem/1 $poppins;
+          letter-spacing: 0px;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 3rem 0;
+
+    p {
+      color: color(wine);
+      font: 400 1.6rem/1 $poppins;
+      letter-spacing: 0.032rem;
+      margin: 0 1rem 2rem 0;
+      position: relative;
+
+      @include iota-breakpoint(md) {
+        margin: 0 2rem 0 0;
+        padding-right: 2rem;
+
+        &::after {
+          background-color: color(wine);
+          content: "";
+          height: 2.4rem;
+          right: 0;
+          position: absolute;
+          top: 0;
+          width: 0.1rem;
+        }
+      }
+    }
+
+    ul {
+      li {
+        position: relative;
+
+        @include iota-breakpoint(md) {
+          margin-right: 2rem;
+          padding-right: 2rem;
+
+          &::after {
+            background-color: color(wine);
+            content: "";
+            height: 2.4rem;
+            right: 0;
+            position: absolute;
+            top: 0;
+            width: 0.1rem;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0;
+          padding-right: 0;
+
+          &::after {
+            display: none;
+          }
+        }
+
+        a {
+          color: color(wine);
+          font: 400 1.6rem/1 $poppins;
+          letter-spacing: 0.032rem;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    background-color: color(white);
+  }
+}

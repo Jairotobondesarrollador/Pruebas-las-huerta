@@ -1,0 +1,218 @@
+.c-events {
+  background-color: #fef8f6;
+  margin-bottom: 7rem;
+  padding: 7.1rem 0 9.9rem 0;
+  @include iota-breakpoint(md) {
+    margin-bottom: 10rem;
+  }
+
+  &__title {
+    color: #ef9b81;
+    font: 600 1.8rem/2.7rem $poppins;
+    letter-spacing: 0.252rem;
+    text-transform: uppercase;
+  }
+
+  &__subtitle {
+    color: color(wine);
+    font: 700 3rem/1.4rem $poppins;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+
+    @include iota-breakpoint(md) {
+      font: 700 6rem/5rem $poppins;
+    }
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__button {
+    appearance: none;
+    background-color: transparent;
+    display: flex;
+
+    &--primary {
+      align-items: center;
+      border: 0.1rem solid #ef9b81;
+      border-radius: 0.5rem;
+      margin-bottom: 2.5rem;
+      padding: 1.6rem 2.5rem;
+      width: 100%;
+
+      @include iota-breakpoint(md) {
+        margin-right: 2rem;
+        max-width: 55rem;
+        padding: 2.3rem 2.5rem;
+        width: calc(50% - 2rem);
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      & .js-checked {
+        background-color: color(white);
+        border: 0.1rem solid #ef9b81;
+        border-radius: 50%;
+        display: inline-block;
+        height: 3rem;
+        margin-right: 2.6rem;
+        width: 3rem;
+      }
+
+      &.is-selected {
+        & .js-checked {
+          background-image: url('../img/check-circle.svg');
+          background-position: center;
+          height: 4rem;
+          width: 4rem;
+        }
+      }
+
+      & span,
+      & div {
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+
+  &__heading {
+    color: color(wine);
+    font: 600 1.4rem/2.1rem $poppins;
+    letter-spacing: 0;
+  }
+
+  &__time {
+    color: color(wine);
+    font: 300 1.2rem/1.8rem $poppins;
+  }
+
+  &__tab {
+    &_title {
+      color: color(wine);
+      font: 700 3rem/4.6rem $poppins;
+      letter-spacing: 0;
+      margin-bottom: 2.1rem;
+      text-transform: capitalize;
+    }
+
+    &_subtitle {
+      color: color(wine);
+      font: 700 2rem/2.5rem $poppins;
+      margin-bottom: 1.5rem;
+      text-transform: capitalize;
+    }
+
+    &_copy {
+      color: #585858;
+      font: 400 1.6rem/2.5rem $poppins;
+      letter-spacing: 0;
+      margin-bottom: 2rem;
+
+      strong {
+        color: color(wine);
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__schedule {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+    width: 100%;
+
+    span {
+      color: #ef9b81;
+      font-size: 1.1rem;
+      margin-right: 0.5rem;
+      padding-right: 0.5rem;
+      position: relative;
+
+      @include iota-breakpoint(md) {
+        font-size: 1.6rem;
+        padding-right: 2rem;
+        margin-right: 2rem;
+      }
+
+      &:last-child {
+        margin-right: 0;
+        padding-right: 0;
+
+        &::after {
+          display: none;
+        }
+      }
+
+      &::after {
+        background-color: #ef9b81;
+        content: '';
+        height: 1.1rem;
+        right: 0;
+        position: absolute;
+        top: 0;
+        width: 0.1rem;
+
+        @include iota-breakpoint(md) {
+          height: 2.1rem;
+        }
+      }
+    }
+  }
+
+  &__buttons {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__subscribe {
+    background-color: color(wine);
+    border-radius: 1rem;
+    background-position: 3rem 50%;
+    background-repeat: no-repeat;
+    font: 600 1.7rem/2.6rem $poppins;
+    letter-spacing: 0.182rem;
+    color: color(white);
+    display: inline-flex;
+    margin-right: 1rem;
+    justify-content: center;
+    min-width: 78%;
+    padding: 1.5rem 2rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+
+    &:hover,
+    &:active {
+      color: color(white);
+      text-decoration: none;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    @include iota-breakpoint(md) {
+      background-image: url('../img/right-arrow-white.svg');
+      margin-bottom: 0;
+      padding: 1.4rem 5.5rem 1.4rem 6rem;
+    }
+  }
+
+  &__phone {
+    border: 0.1rem solid color(wine);
+    border-radius: 0.5rem;
+    padding: 1.2rem 2rem;
+  }
+}

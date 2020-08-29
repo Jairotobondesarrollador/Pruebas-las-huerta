@@ -1,0 +1,284 @@
+.c-form {
+  margin-bottom: 10rem;
+
+  &__img {
+    padding: 0 2rem;
+    margin: 0 auto 2rem auto;
+    height: 35rem;
+    width: 100%;
+
+    @include iota-breakpoint(md) {
+      padding: 0;
+      margin: 0 auto;
+      height: auto;
+      max-height: 49.1rem;
+      width: auto;
+    }
+  }
+
+  &__flex {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  & .switch {
+    margin-bottom: 1.1rem;
+    width: 100%;
+
+    @include iota-breakpoint(md) {
+      width: 50%;
+      margin-bottom: 0;
+    }
+  }
+
+  & .wpcf7 {
+    border: 0.1rem solid #ef9b81;
+    border-radius: 1.5rem;
+    margin-left: 1.1rem;
+    padding: 4rem 2rem 4rem 2rem;
+
+    @include iota-breakpoint(md) {
+      padding: 2rem 3.5rem 2rem 5.1rem;
+    }
+
+    h1 {
+      color: color(wine);
+      font: 700 3rem/1 $poppins;
+      letter-spacing: 0;
+      margin: 0 0 2rem 0;
+      text-transform: capitalize;
+
+      @include iota-breakpoint(md) {
+        font: 700 3rem/4.6rem $poppins;
+        margin: 0;
+      }
+    }
+
+    h2 {
+      color: color(wine);
+      font: 300 2rem/1 $poppins;
+      margin-bottom: 2.13rem;
+
+      @include iota-breakpoint(md) {
+        font: 300 2rem/2.5rem $poppins;
+      }
+    }
+
+    input[type='text'],
+    input[type='email'],
+    textarea {
+      border: 0.05rem solid #ef9b81;
+      border-radius: 0.5rem;
+      color: color(wine);
+      font-family: $poppins;
+      margin-bottom: 0.72rem;
+      padding: 1rem;
+      width: 100%;
+
+      &::placeholder {
+        color: color(wine);
+      }
+    }
+
+    input[type='submit'] {
+      appearance: none;
+      border: none;
+      background-color: color(wine);
+      color: color(white);
+      font: 600 1.6rem/1.1rem $poppins;
+      letter-spacing: 0;
+      padding: 2rem 0;
+      text-align: center;
+      width: 100%;
+
+      @include iota-breakpoint(md) {
+        width: 50%;
+      }
+    }
+
+    textarea {
+      max-height: 13.6rem;
+    }
+
+    br {
+      display: none;
+    }
+
+    &-list-item {
+      align-items: center;
+      display: flex;
+      &-label {
+        color: #707070;
+        font: 400 0.8rem/1rem $montserrat;
+        letter-spacing: 0;
+        margin-left: 1rem;
+        @include iota-breakpoint(md) {
+          width: 50%;
+        }
+      }
+    }
+  }
+
+  &--one {
+    & input,
+    & textarea {
+      width: 100%;
+      @include iota-breakpoint(md) {
+        width: 98%;
+      }
+    }
+  }
+
+  &--two {
+    & input {
+      width: 100%;
+      @include iota-breakpoint(md) {
+        margin-right: 1.1rem;
+        width: calc(50% - 1.1rem);
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &--three {
+    & input {
+      width: 100%;
+      @include iota-breakpoint(md) {
+        margin-right: 0.9rem;
+        width: calc(33% - 0.9rem);
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__links {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.2rem;
+
+    & input[type='submit'] {
+      background-color: #ef9b81;
+      border: 0;
+      border-radius: 0.5rem;
+      color: #fff;
+      font: 600 1.6rem/1.1 $montserrat;
+      min-height: 5.8rem;
+      width: 100%;
+
+      @include iota-breakpoint(md) {
+        width: 65%;
+      }
+    }
+
+    & a {
+      color: color(wine);
+      font: 400 1.6rem/1.1 $montserrat;
+      letter-spacing: 0.032rem;
+      text-align: left;
+      text-decoration: underline;
+      width: 100%;
+
+      @include iota-breakpoint(md) {
+        width: 35%;
+      }
+    }
+  }
+
+  &__close {
+    appearance: none;
+    background: none;
+    border: none;
+    margin: 3rem;
+  }
+
+  &__title {
+    color: color(wine);
+    font: 700 1.8rem/1 $poppins;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+
+    @include iota-breakpoint(md) {
+      font: 700 3.3rem/1 $poppins;
+    }
+  }
+
+  &__subtitle {
+    color: color(wine);
+    font: 400 1.6rem/1 $poppins;
+    margin-bottom: 2.63rem;
+    text-transform: capitalize;
+  }
+
+  &__bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 14.5rem;
+    text-align: right;
+    width: 100%;
+
+    &--info {
+      background-color: #ef9b81;
+    }
+  }
+
+  &--default,
+  &--price {
+    padding: 2.7rem 5.6rem 4.2rem;
+    margin-bottom: 0;
+
+    & > div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      & input,
+      & textarea {
+        border: 0.05rem solid #4aada7;
+        border-radius: 0.5rem;
+        font: 300 1.2rem/1.1 $poppins;
+        letter-spacing: 0;
+        color: color(wine);
+        margin-bottom: 0.8rem;
+        min-height: 3.8rem;
+        padding-left: 1.1rem;
+
+        &::placeholder {
+          color: color(wine);
+        }
+      }
+
+      & textarea {
+        display: block;
+        margin-bottom: 1.43rem;
+        padding-top: 1.2rem;
+        min-height: 15.2rem;
+      }
+    }
+  }
+
+  &__body {
+    display: block !important;
+  }
+
+  &__price {
+    background: #ef9b81 0% 0% no-repeat padding-box;
+    border: 1px solid #ef9b81;
+    border-radius: 5px;
+    color: color(wine);
+    text-align: left;
+    font: 600 17px/26px $poppins;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    padding: 1.8rem 2.2rem 1.6rem 2.2rem;
+  }
+}

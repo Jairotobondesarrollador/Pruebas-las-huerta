@@ -1,0 +1,84 @@
+/**
+ * Accordion Component
+ */
+
+.c-accordion {
+  margin-bottom: 10rem;
+
+  [aria-hidden="true"] {
+    display: none;
+  }
+
+  &__controls {
+    list-style: none;
+    margin-top: 2rem;
+  }
+
+  &__cta {
+    background-color: color(white);
+    border: 0.1rem solid color(wine);
+    border-radius: 1rem;
+    background-image: url("../img/whatsapp.svg");
+    background-position: 1.7rem 50%;
+    background-repeat: no-repeat;
+    font: 600 1.3rem/2rem $poppins;
+    letter-spacing: 0.182rem;
+    color: color(wine);
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 6rem;
+    min-width: 100%;
+    padding: 1.5rem 3.9rem 1.3rem 6rem;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    &:hover,
+    &:active {
+      color: color(wine);
+      text-decoration: none;
+    }
+
+    @include iota-breakpoint(md) {
+      margin-bottom: 0;
+      min-width: 19.7rem;
+    }
+  }
+
+  &__button {
+    -webkit-appearance: none;
+    background: none;
+    border: none;
+    color: #585858;
+    cursor: pointer;
+    letter-spacing: 00;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding-left: 2.2rem;
+    position: relative;
+
+    span {
+      font: 400 1.6rem/2.9rem $poppins;
+    }
+
+    &::after {
+      background-image: url("../img/down-pink.svg");
+      background-repeat: no-repeat;
+      content: "";
+      display: inline-block;
+      height: 0.7rem;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1.2rem;
+    }
+
+    span {
+      pointer-events: none;
+    }
+  }
+}

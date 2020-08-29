@@ -1,0 +1,72 @@
+.c-services {
+	margin-bottom: 10rem;
+
+	&__img {
+		margin-bottom: 3rem;
+	}
+
+	&__title {
+		font: 500 1.8rem/1 $poppins;
+		color: #ef9b81;
+		letter-spacing: 0.252rem;
+		margin-bottom: 0.2rem;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		color: color(wine);
+		font: 700 3rem/1 $poppins;
+		letter-spacing: 0;
+		margin-bottom: 1rem;
+		text-transform: capitalize;
+	}
+
+	&__profile {
+		color: #68161c;
+		font: 600 1.7rem/2rem $poppins;
+		letter-spacing: 0;
+		margin-bottom: 0.5rem;
+	}
+
+	&__copy {
+		color: #585858;
+		font: 400 1.6rem/2rem $poppins;
+		letter-spacing: 0;
+		margin-bottom: 1.8rem;
+
+		@include iota-breakpoint(md) {
+			font: 400 1.6rem/2.5rem $poppins;
+		}
+	}
+
+	&__flex {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__icon {
+		display: inline-block;
+		margin-right: 1.24rem;
+	}
+
+	&__star {
+		background-image: url('../img/star.svg');
+		background-repeat: no-repeat;
+		display: inline-block;
+		height: 1.8rem;
+		width: 1.8rem;
+	}
+
+	&__heading {
+		color: color(wine);
+		font: 700 3rem/4.6rem $poppins;
+		letter-spacing: 0;
+		margin-bottom: 0.6rem;
+		text-transform: capitalize;
+
+		@include iota-breakpoint(md) {
+			font: 700 3rem/1 $poppins;
+		}
+	}
+}
